@@ -23,7 +23,7 @@ class BeersRepository @Inject()(dbConfigProvider: DatabaseConfigProvider)(implic
 
     def * = (id, name, firstBrewed, description, imageUrl, abv, ph) <> ((Beer.apply _).tupled, Beer.unapply)
   }
-dfgdf
+
   private val beers = TableQuery[BeersTable]
 
   /** Retrieve all beers */
